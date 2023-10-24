@@ -6,13 +6,17 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './screens/Home';
 import About from './screens/About';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+
 
 export default function App() {
 
   const stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer>
+    
+    <NavigationContainer >
       <stack.Navigator>
         <stack.Screen 
         name="Home" 
@@ -34,13 +38,14 @@ export default function App() {
         />
       </stack.Navigator>
     </NavigationContainer>
+   
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
   },
