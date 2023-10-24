@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screens/Home';
 import About from './screens/About';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import LUSE from './screens/LUSE';
 
 
 
@@ -35,6 +36,10 @@ export default function App() {
         <stack.Screen 
         name="About" 
         component={About} 
+        />
+        <stack.Screen
+        name="LUSE"
+        component={LUSE}
         />
       </stack.Navigator>
     </NavigationContainer>

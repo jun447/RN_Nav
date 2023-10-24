@@ -73,6 +73,14 @@ const Home = ({navigation}) => {
       >
         <Text>Go to About</Text>
       </Pressable>
+      <Pressable 
+        onPress={() => navigation.navigate('LUSE',
+              // {takeData: 'Hello From Ghori',myNumbr: 321,value:myGpa}
+        )}
+        style={styles.button}
+      >
+        <Text>Go to LUSE</Text>
+      </Pressable>
       {/* create pressable to console MyGpa variable */}
       <Pressable 
         onPress={() => { console.log(myGpa); setMyGpa(myGpa+1); }}
