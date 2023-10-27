@@ -8,6 +8,7 @@ import Home from './screens/Home';
 import About from './screens/About';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LUSE from './screens/LUSE';
+import Login from './screens/Login';
 
 
 
@@ -40,6 +41,10 @@ export default function App() {
         <stack.Screen
         name="LUSE"
         component={LUSE}
+        />
+        <stack.Screen
+          name="Login"
+          component={Login}
         />
       </stack.Navigator>
     </NavigationContainer>

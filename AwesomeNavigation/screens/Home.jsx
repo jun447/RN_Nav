@@ -127,6 +127,13 @@ const Home = ({navigation}) => {
         <Text>Console MyGpa</Text>
         <Text>{myGpa}</Text>
       </Pressable>
+      <Pressable
+        onPress={() => navigation.navigate('Login')}
+        style={styles.button}
+      >
+        <Text>Go to Login</Text>
+      </Pressable>
+
       <View>
         <ScrollView>
           <FlatList
