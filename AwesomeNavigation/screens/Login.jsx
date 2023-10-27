@@ -1,13 +1,24 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
-
+import axios from 'axios'
 const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
     const handleLogin = () => {
         console.log(`Username: ${username}, Password: ${password}`)
+        // axios.post(url, {
+        //     username: username,
+        //     password: password
+        // })
+        //     .then((response) => {
+        //         console.log(response);
+        //     }, (error) => {
+        //         console.log(error);
+        // });
     }
+    // make axios post call to login
+   
 
     return (
         <View style={styles.container}>

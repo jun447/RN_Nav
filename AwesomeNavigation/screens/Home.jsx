@@ -1,6 +1,6 @@
 import { FlatList, Pressable, StyleSheet, Text, View,ScrollView} from 'react-native'
 import React ,{useEffect, useState} from 'react'
-
+import useMovies from './useCustomHook';
 
 const myDummyData = [
   
@@ -63,17 +63,18 @@ const myDummyData = [
 const Home = ({navigation}) => {
   const [myGpa, setMyGpa] = useState(3.5)
   const [font, setFont] = useState(20)
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
+  const { data, loading, error } = useMovies('https://reactnative.dev/movies.json');
 
-  // useEffect to get data from API
-  useEffect(() => {
-    fetch('https://reactnative.dev/movies.json')
-    .then((response) => response.json() )
-    .then((json) => {console.log(json); setData(json);})
-    .catch((error) => console.error(error))
-    .finally(() => console.log("API call finished"));
-  },[]);
-
+  // // useEffect to get data from API
+  // useEffect(() => {
+  //   fetch('https://reactnative.dev/movies.json')
+  //   .then((response) => response.json() )
+  //   .then((json) => {console.log(json); setData(json);})
+  //   .catch((error) => console.error(error))
+  //   .finally(() => console.log("API call finished"));
+  // },[]);
+ 
 
 
 
@@ -100,6 +101,14 @@ const Home = ({navigation}) => {
     });
     return unsubscribe;
   }, [navigation, font]);
+
+  if (loading) {
+    return <Text>Loading...</Text>;
+  }
+
+  if (error) {
+    return <Text>Error: {error.message}</Text>;
+  }
 
   return (
     <View>
@@ -137,7 +146,7 @@ const Home = ({navigation}) => {
       <View>
         <ScrollView>
           <FlatList
-            data={data.movies}
+            data={data}
             renderItem={({item}) => (
               <View>
                 <Text style={styles.itemTitle} >{item.title}</Text>
@@ -146,6 +155,10 @@ const Home = ({navigation}) => {
             )}
             keyExtractor={item => item.id}
           />
+          <View>
+               {/* <Text>{JSON.stringify(data)}</Text> */}
+               {/* <Text>{data.movies}</Text> */}
+          </View>
           <FlatList
             data={myDummyData}
             renderItem={({item}) => (
