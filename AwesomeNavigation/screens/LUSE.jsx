@@ -64,7 +64,16 @@ const LUSE = () => {
             {/* update all */}
             <Button
                 title="Update All"
-                onPress={() => {setCount(count+1);setNumber(number+1);setFlag(flag+1)}}
+                onPress={() => {
+                    // setCount(count+1);
+                    // setNumber(number+1);
+                    // setFlag(flag+1)
+                    global.setting = {
+                        font: 20,
+                        color: 'green',
+                        fontWeight: 'bold',
+                    };
+                }}
                 style={styles.button}
             />
         </>

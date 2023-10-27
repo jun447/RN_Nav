@@ -1,5 +1,5 @@
-import { FlatList, Pressable, StyleSheet, Text, View} from 'react-native'
-import React ,{useState} from 'react'
+import { FlatList, Pressable, StyleSheet, Text, View,ScrollView} from 'react-native'
+import React ,{useEffect, useState} from 'react'
 
 
 const myDummyData = [
@@ -58,14 +58,52 @@ const myDummyData = [
 
 ] 
 
+// use effect to run when component is mounted
 
 const Home = ({navigation}) => {
- const [myGpa, setMyGpa] = useState(3.5)
- 
+  const [myGpa, setMyGpa] = useState(3.5)
+  const [font, setFont] = useState(20)
+  const [data, setData] = useState([])
+
+  // useEffect to get data from API
+  useEffect(() => {
+    fetch('https://reactnative.dev/movies.json')
+    .then((response) => response.json() )
+    .then((json) => {console.log(json); setData(json);})
+    .catch((error) => console.error(error))
+    .finally(() => console.log("API call finished"));
+  },[]);
+
+
+
+
+
+
+  // define some global setinhgs in useEffect
+  useEffect(() => {
+    global.setting = {
+      font: 20,
+      color: 'red',
+      fontWeight: 'bold',
+    };
+  });
+  // global.setting = {
+  //       font: 20,
+       
+  //       fontWeight: 'bold',
+  // };
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      setFont(font + 10);
+      console.log(`Home screen is focused with Font = ${font}`);
+      console.log("Home screen is focused with Global = ",global.setting);
+    });
+    return unsubscribe;
+  }, [navigation, font]);
 
   return (
     <View>
-      <Text>Home</Text>
+     <Text style={[styles.txt, {fontSize: font, color: global.setting ? global.setting.color : 'blue' }]}>Home</Text>
       {/* create pressable to go to about screen */}
       <Pressable 
         onPress={() => navigation.navigate('About',{takeData: 'Hello From Ghori',myNumbr: 321,value:myGpa})}
@@ -90,16 +128,28 @@ const Home = ({navigation}) => {
         <Text>{myGpa}</Text>
       </Pressable>
       <View>
-        <FlatList
-          data={myDummyData}
-          renderItem={({item}) => (
-            <View>
-              <Text style={styles.itemTitle} >{item.name}</Text>
-              <Text style={styles.item}>{item.description}</Text>
-            </View>
-          )}
-         keyExtractor={item => item.key}
-        />
+        <ScrollView>
+          <FlatList
+            data={data.movies}
+            renderItem={({item}) => (
+              <View>
+                <Text style={styles.itemTitle} >{item.title}</Text>
+                <Text style={styles.item}>{item.releaseYear}</Text>
+              </View>
+            )}
+            keyExtractor={item => item.id}
+          />
+          <FlatList
+            data={myDummyData}
+            renderItem={({item}) => (
+              <View>
+                <Text style={styles.itemTitle} >{item.name}</Text>
+                <Text style={styles.item}>{item.description}</Text>
+              </View>
+            )}
+            keyExtractor={item => item.key}
+          />
+        </ScrollView>
       </View>
     </View>
   )
@@ -121,6 +171,12 @@ const styles = StyleSheet.create({
   itemTitle: {
     fontSize: 32,
   },
+  txt: {
+    color: 'red',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+    textAlign: 'center',
+  }
 })
 
 export default Home
