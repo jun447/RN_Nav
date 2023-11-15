@@ -1,4 +1,4 @@
-import { TouchableOpacity, StyleSheet, Text, View,TextInput } from 'react-native'
+import { TouchableOpacity, StyleSheet, Text, View,TextInput, ScrollView } from 'react-native'
 import FontAwesome  from '@expo/vector-icons/FontAwesome';
 import { useState } from 'react';
 const Signup = () => {
@@ -6,17 +6,19 @@ const Signup = () => {
 
   return (
     <View style={styles.container}>
+      <ScrollView>
       <View style={styles.textWrapper}>
         <Text style={styles.text}>{" Create your"}</Text>
         <Text style={styles.text}>{" Account"}</Text>
       </View>
+    
       <View style={styles.formWrapper}>
         <View style={styles.inputWrapper}>
           <TextInput style={styles.input} placeholder="       Username" />
           <FontAwesome
             style={styles.icon}
             name="envelope"
-            size={18}
+            size={16}
             color="#9e9e9e"
           />
         </View>
@@ -57,6 +59,7 @@ const Signup = () => {
           </View>
         </View>
       </View>
+      
       <View style={styles.thrdpartyLoginAPI_wrapper}>
         <View style={styles.mangIcon}>
           <FontAwesome name="facebook-square" size={30} color="#3b5998" />
@@ -69,9 +72,10 @@ const Signup = () => {
         </View>
       </View>
       <View style={styles.signInWrapper}>
-          <Text style={styles.signInText}>Already have an account? </Text>
-          <Text style={styles.signInLink}>Sign in</Text>
-        </View>
+        <Text style={styles.signInText}>Already have an account? </Text>
+        <Text style={styles.signInLink}>Sign in</Text>
+      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -89,10 +93,11 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold",
     textAlign: "center",
-    fontFamily: "Ariel",
   },
   textWrapper: {
     flex: 0.4,
+    marginTop: 100,
+    marginBottom: 50,
     // borderColor: "pink",
     // borderWidth: 3,
     // backgroundColor: "green",
