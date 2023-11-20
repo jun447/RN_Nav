@@ -18,9 +18,9 @@ const Welcome = () => {
                 <Text style={styles.signupButtonText}>Login</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.signupButton}>
+              {/* <TouchableOpacity style={styles.signupButton}>
                 <Text style={styles.signupButtonText}>SignUp</Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
             </View>
             <View style={styles.inputWrapper}>
               <View style={styles.separator}>
