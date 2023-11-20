@@ -1,7 +1,7 @@
 import { TouchableOpacity, StyleSheet, Text, View,TextInput, ScrollView } from 'react-native'
 import FontAwesome  from '@expo/vector-icons/FontAwesome';
 import { useState } from 'react';
-const Signup = () => {
+const Login = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [secureTextEntry, setSecureTextEntry] = useState(true);
   return (
@@ -262,4 +262,4 @@ const styles = StyleSheet.create({
     color: "#8f2bfd",
   },
 });
-export default Signup;
+export default Login;
