@@ -3,17 +3,17 @@ import FontAwesome  from '@expo/vector-icons/FontAwesome';
 import { useState } from 'react';
 const Signup = () => {
   const [isChecked, setIsChecked] = useState(false);
-
+  const [secureTextEntry, setSecureTextEntry] = useState(true);
   return (
     <View style={styles.container}>
       <ScrollView>
-      <View style={styles.textWrapper}>
-        <Text style={styles.text}>{" Create your"}</Text>
-        <Text style={styles.text}>{" Account"}</Text>
-      </View>
-    
-      <View style={styles.formWrapper}>
-        <View style={styles.inputWrapper}>
+        <View style={styles.textWrapper}>
+          <Text style={styles.text}>{" Login to your"}</Text>
+          <Text style={styles.text}>{" Account"}</Text>
+        </View>
+
+        <View style={styles.formWrapper}>
+          {/* <View style={styles.inputWrapper}>
           <TextInput style={styles.input} placeholder="       Username" />
           <FontAwesome
             style={styles.icon}
@@ -21,34 +21,44 @@ const Signup = () => {
             size={16}
             color="#9e9e9e"
           />
-        </View>
-        <View style={styles.inputWrapper}>
-          <TextInput
-            style={styles.input}
-            placeholder="       Email Address"
-            secureTextEntry={true}
-          />
-          <FontAwesome
-            style={styles.icon}
-            name="envelope-o"
-            size={18}
-            color="#9e9e9e"
-          />
-        </View>
-        <View style={styles.inputWrapper}>
-          <TextInput
-            style={styles.input}
-            placeholder="       Password"
-            secureTextEntry={true}
-          />
-          <FontAwesome
-            style={styles.icon}
-            name="lock"
-            size={18}
-            color="#9e9e9e"
-          />
-        </View>
-        <View style={styles.inputWrapper}>
+        </View> */}
+          <View style={styles.inputWrapper}>
+            <TextInput
+              style={styles.input}
+              placeholder="       Email Address"
+              secureTextEntry={true}
+            />
+            <FontAwesome
+              style={styles.icon}
+              name="envelope"
+              size={18}
+              color="#9e9e9e"
+            />
+          </View>
+          <View style={styles.inputWrapper}>
+            <TextInput
+              style={styles.input}
+              placeholder="       Password"
+              secureTextEntry={secureTextEntry}
+            />
+            <FontAwesome
+              style={styles.icon}
+              name="lock"
+              size={18}
+              color="#9e9e9e"
+            />
+            <TouchableOpacity
+              onPress={() => setSecureTextEntry(!secureTextEntry)}
+            >
+              <FontAwesome
+                style={styles.iconEye}
+                name={secureTextEntry ? "eye-slash" : "eye"}
+                size={22}
+                color="#9e9e9e"
+              />
+            </TouchableOpacity>
+          </View>
+          {/* <View style={styles.inputWrapper}>
           <TextInput
             style={styles.input}
             placeholder="       Mobile Number"
@@ -60,47 +70,47 @@ const Signup = () => {
             size={18}
             color="#9e9e9e"
           />
-        </View>
-        <View style={styles.inputWrapper}>
-          <View style={styles.checkboxWrapper}>
-            <TouchableOpacity onPress={() => setIsChecked(!isChecked)}>
-              <FontAwesome
-                style={styles.checkbox}
-                name={isChecked ? "check-square-o" : "square-o"}
-                size={20}
-                color="#9e9e9e"
-              />
+        </View> */}
+          <View style={styles.inputWrapper}>
+            <View style={styles.checkboxWrapper}>
+              <TouchableOpacity onPress={() => setIsChecked(!isChecked)}>
+                <FontAwesome
+                  style={styles.checkbox}
+                  name={isChecked ? "check-square-o" : "square-o"}
+                  size={20}
+                  color="#9e9e9e"
+                />
+              </TouchableOpacity>
+              <Text style={styles.checkboxLabel}>Remember me</Text>
+            </View>
+            <TouchableOpacity style={styles.signupButton}>
+              <Text style={styles.signupButtonText}>Login</Text>
             </TouchableOpacity>
-            <Text style={styles.checkboxLabel}>Remember me</Text>
           </View>
-          <TouchableOpacity style={styles.signupButton}>
-            <Text style={styles.signupButtonText}>Sign up</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.inputWrapper}>
-          <View style={styles.separator}>
-            <View style={styles.line} />
-            <Text style={styles.separatorText}>or continue with</Text>
-            <View style={styles.line} />
+          <View style={styles.inputWrapper}>
+            <View style={styles.separator}>
+              <View style={styles.line} />
+              <Text style={styles.separatorText}>or continue with</Text>
+              <View style={styles.line} />
+            </View>
           </View>
         </View>
-      </View>
-      
-      <View style={styles.thrdpartyLoginAPI_wrapper}>
-        <View style={styles.mangIcon}>
-          <FontAwesome name="facebook-square" size={30} color="#3b5998" />
+
+        <View style={styles.thrdpartyLoginAPI_wrapper}>
+          <View style={styles.mangIcon}>
+            <FontAwesome name="facebook-square" size={30} color="#3b5998" />
+          </View>
+          <View style={styles.mangIcon}>
+            <FontAwesome name="google" size={30} color="#db4437" />
+          </View>
+          <View style={styles.mangIcon}>
+            <FontAwesome name="apple" size={30} color="#000000" />
+          </View>
         </View>
-        <View style={styles.mangIcon}>
-          <FontAwesome name="google" size={30} color="#db4437" />
+        <View style={styles.signInWrapper}>
+          <Text style={styles.signInText}>Dont have an Account? </Text>
+          <Text style={styles.signInLink}>Sign Up</Text>
         </View>
-        <View style={styles.mangIcon}>
-          <FontAwesome name="apple" size={30} color="#000000" />
-        </View>
-      </View>
-      <View style={styles.signInWrapper}>
-        <Text style={styles.signInText}>Already have an account? </Text>
-        <Text style={styles.signInLink}>Sign in</Text>
-      </View>
       </ScrollView>
     </View>
   );
@@ -141,6 +151,12 @@ const styles = StyleSheet.create({
     top: 25,
     left: 20,
   },
+  iconEye: {
+    position: "absolute",
+    bottom: 25,
+    left: 150,
+    // zIndex: 100,
+  },
   input: {
     height: 50,
     width: "95%",
@@ -177,51 +193,51 @@ const styles = StyleSheet.create({
     color: "#9e9e9e",
   },
   signupButton: {
-    width: '95%',
+    width: "95%",
     borderRadius: 25,
-    backgroundColor: '#7737b9',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "#7737b9",
+    justifyContent: "center",
+    alignItems: "center",
     // marginTop: 10,
   },
   signupButtonText: {
     padding: 15,
-    color: 'white',
+    color: "white",
     fontSize: 16,
   },
   separator: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginVertical: 20,
   },
   line: {
     flex: 1,
     height: 1,
-    backgroundColor: '#9e9e9e',
+    backgroundColor: "#9e9e9e",
   },
   separatorText: {
     marginHorizontal: 10,
-    color: '#9c9c9c',
+    color: "#9c9c9c",
   },
   thrdpartyLoginAPI_wrapper: {
     flex: 0.1,
     // borderColor: "yellow",
     // borderWidth: 3,
-    flexDirection: 'row',
-    alignItems: 'flex-start', 
-    justifyContent: 'space-evenly',
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "space-evenly",
   },
   mangIcon: {
     borderWidth: 0.8,
-    borderColor: '#f6f6f6',
+    borderColor: "#f6f6f6",
     // marginVertical: 8,
     width: 80,
     height: 60,
     borderRadius: 12,
     padding: 10,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
     shadowColor: "fff",
     shadowOffset: {
       width: 1,
@@ -232,18 +248,18 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   signInWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
     marginTop: 20,
     gap: 5,
   },
   signInText: {
     fontSize: 16,
-    color: '#c9c9c9',
+    color: "#c9c9c9",
   },
   signInLink: {
     fontSize: 16,
-    color: '#8f2bfd',
+    color: "#8f2bfd",
   },
 });
 export default Signup;
