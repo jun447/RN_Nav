@@ -32,7 +32,7 @@ const Signup = () => {
               style={styles.icon}
               name="envelope"
               size={18}
-              color="#9e9e9e"
+              color="#9e9e9c"
             />
           </View>
           <View style={styles.inputWrapper}>
