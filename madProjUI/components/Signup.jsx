@@ -17,8 +17,21 @@ const Signup = () => {
           <TextInput style={styles.input} placeholder="       Username" />
           <FontAwesome
             style={styles.icon}
-            name="envelope"
+            name="user-o"
             size={16}
+            color="#9e9e9e"
+          />
+        </View>
+        <View style={styles.inputWrapper}>
+          <TextInput
+            style={styles.input}
+            placeholder="       Email Address"
+            secureTextEntry={true}
+          />
+          <FontAwesome
+            style={styles.icon}
+            name="envelope-o"
+            size={18}
             color="#9e9e9e"
           />
         </View>
@@ -31,6 +44,19 @@ const Signup = () => {
           <FontAwesome
             style={styles.icon}
             name="lock"
+            size={18}
+            color="#9e9e9e"
+          />
+        </View>
+        <View style={styles.inputWrapper}>
+          <TextInput
+            style={styles.input}
+            placeholder="       Mobile Number"
+            // secureTextEntry={true}
+          />
+          <FontAwesome
+            style={styles.icon}
+            name="mobile-phone"
             size={18}
             color="#9e9e9e"
           />
@@ -96,8 +122,8 @@ const styles = StyleSheet.create({
   },
   textWrapper: {
     flex: 0.4,
-    marginTop: 100,
-    marginBottom: 50,
+    marginTop: 80,
+    marginBottom: 20,
     // borderColor: "pink",
     // borderWidth: 3,
     // backgroundColor: "green",
@@ -213,7 +239,7 @@ const styles = StyleSheet.create({
   },
   signInText: {
     fontSize: 16,
-    color: '#c9c9c9C',
+    color: '#c9c9c9',
   },
   signInLink: {
     fontSize: 16,
