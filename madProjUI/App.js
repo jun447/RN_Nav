@@ -2,6 +2,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Welcome from './components/Welcome';
+import Home from './components/Home';
 
 export default function App() {
   return (
@@ -10,7 +11,8 @@ export default function App() {
       {/* <Signup /> */}
       {/* <Text>Open up App.js to start working on your app!</Text> */}
       {/* <Login /> */}
-      <Welcome />
+      {/* <Welcome /> */}
+      <Home />
     </>
     /* </SafeAreaView> */
   );
