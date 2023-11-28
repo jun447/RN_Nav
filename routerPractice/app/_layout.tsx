@@ -36,6 +36,9 @@ const _layout = () => {
                 backgroundColor: 'orange',
             },
         }} />
+        <Stack.Screen name="(tabs)" options={{
+           headerShown: false,
+        }} />
         
     </Stack>      
   )

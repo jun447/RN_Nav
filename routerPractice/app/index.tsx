@@ -10,6 +10,12 @@ const Home = () => {
       <Link href="/register" asChild>
         <Button title="Register" />
       </Link>
+      <Link href="/One" asChild>
+        <Button title="One" onPress={()=>(console.log('HAI'))} />
+      </Link>
+      {/* <Link href="/Two" asChild>
+        <Button title="Two" onPress={()=>(console.log('HAI Two'))} />
+      </Link> */}
     </View>
   )
 }
