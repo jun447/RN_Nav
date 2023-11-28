@@ -7,7 +7,7 @@ const Home = () => {
     <View style={styles.Constainer} >
       <Text>Home</Text>
       {/* link property */}
-      <Link href="/registerr" asChild>
+      <Link href="/register" asChild>
         <Button title="Register" />
       </Link>
     </View>
