@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Fav = () => {
+const TabNavigation = () => {
   return (
     <View>
-      <Text>Fav</Text>
+      <Text>TabNavigation</Text>
     </View>
   )
 }
 
-export default Fav
+export default TabNavigation
 
 const styles = StyleSheet.create({})
