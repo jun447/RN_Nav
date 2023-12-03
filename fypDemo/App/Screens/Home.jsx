@@ -5,12 +5,19 @@ import Header from '../components/Home/Header'
 const Home = () => {
   return (
     <View>
-      <Header />
-      <Text>Home</Text>
+      <Header styles={styles.pad} />
+      {/* <Text>Home</Text> */}
     </View>
   )
 }
 
-export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  pad: {
+    // padding: 70,
+    // borderWidth: 3,
+    // borderColor: 'green',
+  }
+})
+
+export default Home
