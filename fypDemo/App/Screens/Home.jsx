@@ -1,11 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Header from '../components/Home/Header'
+import Category from '../components/Home/Category'
+import PlaceList from '../components/Home/PlaceList'
 
 const Home = () => {
   return (
-    <View>
-      <Header styles={styles.pad} />
+    <View style={styles.pad}>
+      <Header />
+      <Category />
+      <PlaceList  />
       {/* <Text>Home</Text> */}
     </View>
   )
@@ -14,7 +18,7 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   pad: {
-    // padding: 70,
+    padding: 1
     // borderWidth: 3,
     // borderColor: 'green',
   }

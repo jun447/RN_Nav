@@ -1,4 +1,4 @@
-import { StyleSheet, Image, View, TextInput } from 'react-native'
+import { StyleSheet, Image,Text, View, TextInput } from 'react-native'
 import React from 'react'
 
 const Header = () => {
@@ -12,6 +12,7 @@ const Header = () => {
       <Image source={require('./../../../assets/user.png')} 
       style={styles.userImage}
       />
+      {/* <Text style={styles.text} >Home</Text> */}
     </View>
   )
 }
@@ -28,6 +29,15 @@ const styles = StyleSheet.create({
     // borderColor: '#000',
     // borderWidth: 4,
     // justifyContent: 'end',
+  },
+  text: {
+    // fontSize: 20,
+    // fontWeight: 'bold',
+    // color: '#333',
+    // flex: 1,
+    // textAlign: 'center',
+    // padding: 20,
+    fontFamily: 'railway-bold',
   },
   logo:{
         width: 50,
