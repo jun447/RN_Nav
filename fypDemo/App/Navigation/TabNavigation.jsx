@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
 const TabNavigation = () => {
+  const Tab = createBottomTabNavigator();
+
   return (
-    <View>
-      <Text>TabNavigation</Text>
-    </View>
-  )
-}
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+    </Tab.Navigator>
+  );
+};
 
-export default TabNavigation
+export default TabNavigation;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
