@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+// import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Home from "../Screens/Home";
 import Fav from "../Screens/Fav";
@@ -17,24 +17,31 @@ const TabNavigation = () => {
         tabBarActiveTintColor: "#e91e63",
         tabBarInactiveTintColor: "gray",
       }}
+      
     >
       <Tab.Screen name="Home" component={Home} options={{
-        tabBarLabel: 'Home',
+        tabBarLabel: 'Earn Money',
         tabBarIcon: ({ color, size }) => (
           <Ionicons name="home" color={color} size={size} />
         )
       }} />
-      <Tab.Screen name="Favourite" component={Fav} options={{
-        tabBarLabel: 'Fav',
+      <Tab.Screen name="My Task" component={Fav} options={{
+        tabBarLabel: 'My Tasks',
         tabBarIcon: ({ color, size }) => (
           <Ionicons name="heart-outline" color={color} size={size} />
         )
       }} />
       
-      <Tab.Screen name="Search" component={Search} options={{
-        tabBarLabel: 'Search',
+      <Tab.Screen name="Post" component={Search} options={{
+        tabBarLabel: 'Post',
         tabBarIcon: ({ color, size }) => (
           <Ionicons name="search" color={color} size={size} />
+        )
+      }} />
+      <Tab.Screen name="Messages" component={Profile} options={{
+        tabBarLabel: 'Chat',
+        tabBarIcon: ({ color, size }) => (
+          <FontAwesome name="user-circle" color={color} size={size} />
         )
       }} />
       <Tab.Screen name="Profile" component={Profile} options={{
@@ -50,4 +57,3 @@ const TabNavigation = () => {
 
 export default TabNavigation;
 
-const styles = StyleSheet.create({});
