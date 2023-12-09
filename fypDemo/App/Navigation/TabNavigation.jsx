@@ -15,7 +15,7 @@ const TabNavigation = () => {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#e91e63",
-        tabBarInactiveTintColor: "gray",
+        tabBarInactiveTintColor: "green",
       }}
       
     >
