@@ -63,10 +63,10 @@ const Home = ({ navigation }) => {
         </Button>
       </View>
       <View style={styles.bottomNavBar}>
-        <Text style={styles.bannerText} >Need Some Service</Text>
+        <Text style={styles.bannerText}>Need Some Service</Text>
       </View>
       <View style={styles.servicesSection}>
-      <View style={styles.gridContainer}>
+        <View style={styles.gridContainer}>
           <Pressable style={styles.gridItem}>
             <Ionicons name="md-home" size={24} color="black" />
             <Text style={styles.gridItemText}>Home</Text>
@@ -133,7 +133,6 @@ const Home = ({ navigation }) => {
           </Pressable>
         </View>
       </View>
-      
     </View>
     // {/* </ScrollView> */}
   );
@@ -146,7 +145,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "center",
     backgroundColor: "#fff",
-    gap: 7
+    gap: 7,
   },
   gridItem: {
     width: "23%",
@@ -181,7 +180,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     lineHeight: 35,
     textAlign: "center",
-  
   },
   img: {
     width: 50,
