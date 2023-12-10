@@ -1,6 +1,11 @@
 import { StyleSheet, View, Pressable, Text, Image } from "react-native";
 import React from "react";
-
+import { Button } from "react-native-paper";
+import {
+  Ionicons,
+  FontAwesome,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
 const Home = ({ navigation }) => {
   return (
     // {/* <ScrollView> */}
@@ -31,17 +36,153 @@ const Home = ({ navigation }) => {
         </View>
       </View>
       <View style={styles.threButns}>
-        <Text style={styles.mainText} >Welcome to Work Whiz</Text>
+        <Text style={styles.mainText}>Welcome to Work Whiz</Text>
       </View>
-      <View style={styles.poster}></View>
-      <View style={styles.servicesSection}></View>
-      <View style={styles.bottomNavBar}></View>
+      <View style={styles.poster}>
+        <Button
+          icon={() => <FontAwesome name="dollar" size={24} color="white" />}
+          mode="contained"
+          buttonColor="#316B8C"
+          onPress={() => console.log("Pressed")}
+        >
+          Earn Money
+        </Button>
+        <Button
+          icon={() => (
+            <MaterialCommunityIcons
+              name="briefcase-upload"
+              size={24}
+              color="white"
+            />
+          )}
+          mode="contained"
+          buttonColor="#316B8C"
+          onPress={() => console.log("Pressed")}
+        >
+          Post a Job
+        </Button>
+      </View>
+      <View style={styles.bottomNavBar}>
+        <Text style={styles.bannerText} >Need Some Service</Text>
+      </View>
+      <View style={styles.servicesSection}>
+      <View style={styles.gridContainer}>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-home" size={24} color="black" />
+            <Text style={styles.gridItemText}>Home</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-settings" size={24} color="black" />
+            <Text style={styles.gridItemText}>Settings</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-person" size={24} color="black" />
+            <Text style={styles.gridItemText}>Profile</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-chatbubbles" size={24} color="black" />
+            <Text style={styles.gridItemText}>Chat</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-calendar" size={24} color="black" />
+            <Text style={styles.gridItemText}>Calendar</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-camera" size={24} color="black" />
+            <Text style={styles.gridItemText}>Camera</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-mic" size={24} color="black" />
+            <Text style={styles.gridItemText}>Microphone</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-globe" size={24} color="black" />
+            <Text style={styles.gridItemText}>World</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-rocket" size={24} color="black" />
+            <Text style={styles.gridItemText}>Rocket</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-heart" size={24} color="black" />
+            <Text style={styles.gridItemText}>Heart</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-star" size={24} color="black" />
+            <Text style={styles.gridItemText}>Star</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-book" size={24} color="black" />
+            <Text style={styles.gridItemText}>Book</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-book" size={24} color="black" />
+            <Text style={styles.gridItemText}>Book</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-book" size={24} color="black" />
+            <Text style={styles.gridItemText}>Book</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-book" size={24} color="black" />
+            <Text style={styles.gridItemText}>Book</Text>
+          </Pressable>
+          <Pressable style={styles.gridItem}>
+            <Ionicons name="md-book" size={24} color="black" />
+            <Text style={styles.gridItemText}>Book</Text>
+          </Pressable>
+        </View>
+      </View>
+      
     </View>
     // {/* </ScrollView> */}
   );
 };
 
 const styles = StyleSheet.create({
+  gridContainer: {
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    backgroundColor: "#fff",
+    gap: 7
+  },
+  gridItem: {
+    width: "23%",
+    height: "21%",
+    // padding: 8,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5F5F5",
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  gridItemText: {
+    color: "#555",
+    fontSize: 12,
+    fontWeight: "700",
+    textAlign: "center",
+  },
+  bannerText: {
+    color: "#555",
+    textShadowColor: "rgba(0, 0, 0, 0.25)",
+    textShadowOffset: { width: 0, height: 4 },
+    textShadowRadius: 4,
+    fontSize: 32,
+    fontStyle: "italic",
+    fontWeight: "700",
+    lineHeight: 35,
+    textAlign: "center",
+  
+  },
   img: {
     width: 50,
     height: 50,
@@ -84,7 +225,7 @@ const styles = StyleSheet.create({
   },
   // NavBar Started
   navBar: {
-    flex: 0.1,
+    flex: 0.14,
     // borderColor: "blue",
     // borderWidth: 1,
     flexDirection: "row",
@@ -111,26 +252,29 @@ const styles = StyleSheet.create({
     flex: 0.1,
     // borderColor: "red",
     // borderWidth: 5,
-    backgroundColor: 'rgba(44, 139, 139, 0.85)',
-    justifyContent: "center"
+    backgroundColor: "rgba(44, 139, 139, 0.85)",
+    justifyContent: "center",
   },
   poster: {
-    flex: 0.2,
-    borderColor: "green",
-    borderWidth: 5,
-    backgroundColor: "yellow",
+    flex: 0.09,
+    // borderColor: "green",
+    // borderWidth: 5,
+    // backgroundColor: "yellow",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
   servicesSection: {
-    flex: 0.5,
-    borderColor: "orange",
-    borderWidth: 5,
-    backgroundColor: "blue",
+    flex: 0.6,
+    // borderColor: "orange",
+    // borderWidth: 5,
+    // backgroundColor: "blue",
   },
   bottomNavBar: {
-    flex: 0.105,
-    borderColor: "purple",
-    borderWidth: 3,
-    backgroundColor: "pink",
+    flex: 0.1,
+    // borderColor: "purple",
+    // borderWidth: 3,
+    // backgroundColor: "pink",
   },
 });
 
