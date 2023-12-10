@@ -1,4 +1,3 @@
-// import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Home from "../Screens/Home";
 import Fav from "../Screens/Fav";
@@ -17,7 +16,6 @@ const TabNavigation = () => {
         tabBarActiveTintColor: "#e91e63",
         tabBarInactiveTintColor: "green",
       }}
-      
     >
       <Tab.Screen name="Home" component={Home} options={{
         tabBarLabel: 'Earn Money',
