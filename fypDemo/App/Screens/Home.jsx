@@ -277,3 +277,38 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
+// {
+//   const data = [
+//     { icon: "md-home", text: "Home" },
+//     { icon: "md-settings", text: "Settings" },
+//     { icon: "md-person", text: "Profile" },
+//     { icon: "md-chatbubbles", text: "Chat" },
+//     { icon: "md-calendar", text: "Calendar" },
+//     { icon: "md-camera", text: "Camera" },
+//     { icon: "md-mic", text: "Microphone" },
+//     { icon: "md-globe", text: "World" },
+//     { icon: "md-rocket", text: "Rocket" },
+//     { icon: "md-heart", text: "Heart" },
+//     { icon: "md-star", text: "Star" },
+//     { icon: "md-book", text: "Book" },
+//     // Add more items as needed
+//   ];
+  
+//   export default function App() {
+//     return (
+//       <View style={styles.gridContainer}>
+//         <FlatList
+//           data={data}
+//           numColumns={3} // Adjust as needed
+//           keyExtractor={(item) => item.icon}
+//           renderItem={({ item }) => (
+//             <Pressable style={styles.gridItem}>
+//               <Ionicons name={item.icon} size={24} color="black" />
+//               <Text style={styles.gridItemText}>{item.text}</Text>
+//             </Pressable>
+//           )}
+//         />
+//       </View>
+//     );
+//   }
+// }
