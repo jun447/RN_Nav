@@ -7,30 +7,13 @@ import {
   FlatList,
 } from "react-native";
 import React from "react";
-import { Button } from "react-native-paper";
+import { Button, Searchbar } from "react-native-paper";
 import {
   Ionicons,
   FontAwesome,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
-
-const data = [
-  { icon: "md-home", text: "Home" },
-  { icon: "md-settings", text: "Settings" },
-  { icon: "md-person", text: "Profile" },
-  { icon: "md-chatbubbles", text: "Chat" },
-  { icon: "md-calendar", text: "Calendar" },
-  { icon: "md-camera", text: "Camera" },
-  { icon: "md-mic", text: "Microphone" },
-  { icon: "md-globe", text: "World" },
-  { icon: "md-rocket", text: "Rocket" },
-  { icon: "md-heart", text: "Heart" },
-  { icon: "md-star", text: "Star" },
-  { icon: "md-book", text: "Book" },
-  // Add more items as needed
-];
-
-const Fav = ({navigation}) => {
+const Fav = ({ navigation }) => {
   return (
     // {/* <ScrollView> */}
     <View style={styles.container}>
@@ -63,35 +46,19 @@ const Fav = ({navigation}) => {
         <Text style={styles.mainText}>My Tasks</Text>
       </View>
       <View style={styles.poster}>
-        <Button
-          icon={() => <FontAwesome name="dollar" size={24} color="white" />}
-          mode="contained"
-          buttonColor="#316B8C"
-          onPress={() => console.log("Pressed")}
-        >
-          Earn Money
-        </Button>
-        <Button
-          icon={() => (
-            <MaterialCommunityIcons
-              name="briefcase-upload"
-              size={24}
-              color="white"
-            />
-          )}
-          mode="contained"
-          buttonColor="#316B8C"
-          onPress={() => console.log("Pressed")}
-        >
-          Post a Job
-        </Button>
+        <Searchbar 
+          placeholder="Search Tasks"
+          elevation={5}
+          style={{ 
+            width: "97%" ,
+            // backgroundColor: "rgba(44, 139, 139, 0.85)"
+          }}
+        />
       </View>
       <View style={styles.bottomNavBar}>
         <Text style={styles.bannerText}>Need Some Service</Text>
       </View>
-      <View style={styles.servicesSection}>
-       
-      </View>
+      <View style={styles.servicesSection}></View>
     </View>
     // {/* </ScrollView> */}
   );
@@ -216,13 +183,12 @@ const styles = StyleSheet.create({
     // borderWidth: 5,
     alignItems: "center",
     justifyContent: "center",
-   
   },
   poster: {
     flex: 0.09,
-    borderColor: "green",
-    borderWidth: 5,
-    backgroundColor: "yellow",
+    // borderColor: "green",
+    // borderWidth: 5,
+    // backgroundColor: "yellow",
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
