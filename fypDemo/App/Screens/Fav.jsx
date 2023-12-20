@@ -3,11 +3,11 @@ import {
   View,
   Pressable,
   // Text,
+  TouchableHighlight,
   Image,
   FlatList,
 } from "react-native";
 import React from "react";
-// import reac from 'react-native-paper'
 import {
   Button,
   Searchbar,
@@ -41,7 +41,6 @@ const Fav = ({ navigation }) => {
             onPress={() =>
               navigation.navigate("Profile", console.log("Fav Pressed"))
             }
-            style={styles.button}
           >
             <Image
               style={styles.img}
@@ -85,16 +84,25 @@ const Fav = ({ navigation }) => {
           </View>
           <View style={styles.part3}>
             {/* create button and price tag below */}
-
-            <Button
-              mode="contained"
-              buttonColor="#316B8C"
-              onPress={() => console.log("Pressed")}
+            {/* buttonColor="rgba(44, 139, 139, 0.85)" */}
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonOpen}
             >
-              Open
-            </Button>
-
-            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+              <Text style={styles.buttonOpenTxt}>Open</Text>
+            </Pressable>
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonPrice}
+            >
+              <Text style={styles.buttonPriceTxt}>Rs 200</Text>
+            </Pressable>
+            
+            
           </View>
         </View>
         <View style={styles.task}>
@@ -115,16 +123,25 @@ const Fav = ({ navigation }) => {
           </View>
           <View style={styles.part3}>
             {/* create button and price tag below */}
-
-            <Button
-              mode="contained"
-              buttonColor="#316B8C"
-              onPress={() => console.log("Pressed")}
+            {/* buttonColor="rgba(44, 139, 139, 0.85)" */}
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonOpen}
             >
-              Open
-            </Button>
-
-            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+              <Text style={styles.buttonOpenTxt}>Open</Text>
+            </Pressable>
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonPrice}
+            >
+              <Text style={styles.buttonPriceTxt}>Rs 200</Text>
+            </Pressable>
+            
+            
           </View>
         </View>
         <View style={styles.task}>
@@ -145,16 +162,25 @@ const Fav = ({ navigation }) => {
           </View>
           <View style={styles.part3}>
             {/* create button and price tag below */}
-
-            <Button
-              mode="contained"
-              buttonColor="#316B8C"
-              onPress={() => console.log("Pressed")}
+            {/* buttonColor="rgba(44, 139, 139, 0.85)" */}
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonOpen}
             >
-              Open
-            </Button>
-
-            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+              <Text style={styles.buttonOpenTxt}>Open</Text>
+            </Pressable>
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonPrice}
+            >
+              <Text style={styles.buttonPriceTxt}>Rs 200</Text>
+            </Pressable>
+            
+            
           </View>
         </View>
         <View style={styles.task}>
@@ -175,16 +201,25 @@ const Fav = ({ navigation }) => {
           </View>
           <View style={styles.part3}>
             {/* create button and price tag below */}
-
-            <Button
-              mode="contained"
-              buttonColor="#316B8C"
-              onPress={() => console.log("Pressed")}
+            {/* buttonColor="rgba(44, 139, 139, 0.85)" */}
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonOpen}
             >
-              Open
-            </Button>
-
-            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+              <Text style={styles.buttonOpenTxt}>Open</Text>
+            </Pressable>
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonPrice}
+            >
+              <Text style={styles.buttonPriceTxt}>Rs 200</Text>
+            </Pressable>
+            
+            
           </View>
         </View>
         <View style={styles.task}>
@@ -205,16 +240,25 @@ const Fav = ({ navigation }) => {
           </View>
           <View style={styles.part3}>
             {/* create button and price tag below */}
-
-            <Button
-              mode="contained"
-              buttonColor="#316B8C"
-              onPress={() => console.log("Pressed")}
+            {/* buttonColor="rgba(44, 139, 139, 0.85)" */}
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonOpen}
             >
-              Open
-            </Button>
-
-            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+              <Text style={styles.buttonOpenTxt}>Open</Text>
+            </Pressable>
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonPrice}
+            >
+              <Text style={styles.buttonPriceTxt}>Rs 200</Text>
+            </Pressable>
+            
+            
           </View>
         </View>
         <View style={styles.task}>
@@ -235,18 +279,31 @@ const Fav = ({ navigation }) => {
           </View>
           <View style={styles.part3}>
             {/* create button and price tag below */}
-
-            <Button
-              mode="contained"
-              buttonColor="#316B8C"
-              onPress={() => console.log("Pressed")}
+            {/* buttonColor="rgba(44, 139, 139, 0.85)" */}
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonOpen}
             >
-              Open
-            </Button>
-
-            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+              <Text style={styles.buttonOpenTxt}>Open</Text>
+            </Pressable>
+            <Pressable
+              onPress={() =>
+                navigation.navigate("Profile", console.log("Fav Pressed"))
+              }
+              style={styles.buttonPrice}
+            >
+              <Text style={styles.buttonPriceTxt}>Rs 200</Text>
+            </Pressable>
+            
+            
           </View>
         </View>
+       
+        
+        
+       
       </View>
     </View>
     // {/* </ScrollView> */}
@@ -256,8 +313,63 @@ const Fav = ({ navigation }) => {
 export default Fav;
 
 const styles = StyleSheet.create({
+  part3: {
+    flex: 0.28,
+    // borderColor: "red",
+    // borderWidth: 2,
+    // backgroundColor: "orange",
+    justifyContent:'center',
+    alignItems:'center',
+    gap: 1.5,
+
+  },
+  buttonPrice: {
+    marginVertical: 1,
+    backgroundColor: "#D9D9D9",
+    width: 90,
+    height: 33,
+    justifyContent: "center",
+    alignItems: "center",
+    elevation: 3,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  buttonPriceTxt: {
+    color: '#0F2E48',
+    textAlign: "center",
+    fontSize: 18,
+    fontWeight: "700",
+  },
+  buttonOpen: {
+    marginBottom: 1,
+    backgroundColor: "#D9D9D9",
+    width: 90,
+    height: 33,
+    justifyContent: "center",
+    alignItems: "center",
+    elevation: 3,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  buttonOpenTxt: {
+    color: '#000',
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: '700',  
+  },
   servicesSection: {
     flex: 0.7,
+    gap: 2
     // borderColor: "orange",
     // borderWidth: 2,
     // backgroundColor: "blue",
@@ -274,8 +386,9 @@ const styles = StyleSheet.create({
   },
   task: {
     // flex: 0.3,
-    // borderColor: "red",
-    borderWidth: 1,
+    // backgroundColor: "#eaeaea",
+    // borderColor: "black",
+    // borderWidth: 1,
     // backgroundColor: "pink",
     flexDirection: "row",
     // justifyContent:'center',
@@ -293,12 +406,7 @@ const styles = StyleSheet.create({
     // borderColor: "red",
     // borderWidth: 2,
     // backgroundColor: "yellow",
-  },
-  part3: {
-    flex: 0.28,
-    // borderColor: "red",
-    // borderWidth: 2,
-    // backgroundColor: "orange",
+    gap: 3,
   },
   gridContainer: {
     flex: 1,
@@ -346,6 +454,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     resizeMode: "contain",
+    // backgroundColor: "white",
   },
   img2: {
     width: 50,
@@ -381,8 +490,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    borderColor: "violet",
-    borderWidth: 2,
+    // borderColor: "violet",
+    // borderWidth: 2,
     backgroundColor: "#fff",
   },
   // NavBar Started
@@ -411,16 +520,16 @@ const styles = StyleSheet.create({
   },
   // NavBar Ended
   threButns: {
-    flex: 0.1,
+    // flex: 0.09,
     // borderColor: "red",
     // borderWidth: 5,
     alignItems: "center",
     justifyContent: "center",
   },
   poster: {
-    flex: 0.09,
+    flex: 0.11,
     // borderColor: "green",
-    // borderWidth: 5,
+    // borderWidth: 1,
     // backgroundColor: "yellow",
     flexDirection: "row",
     justifyContent: "space-around",
