@@ -2,12 +2,20 @@ import {
   StyleSheet,
   View,
   Pressable,
-  Text,
+  // Text,
   Image,
   FlatList,
 } from "react-native";
 import React from "react";
-import { Button, Searchbar } from "react-native-paper";
+// import reac from 'react-native-paper'
+import {
+  Button,
+  Searchbar,
+  Avatar,
+  Divider,
+  Text,
+  Chip,
+} from "react-native-paper";
 import {
   Ionicons,
   FontAwesome,
@@ -46,19 +54,200 @@ const Fav = ({ navigation }) => {
         <Text style={styles.mainText}>My Tasks</Text>
       </View>
       <View style={styles.poster}>
-        <Searchbar 
+        <Searchbar
           placeholder="Search Tasks"
           elevation={5}
-          style={{ 
-            width: "97%" ,
+          style={{
+            width: "97%",
             // backgroundColor: "rgba(44, 139, 139, 0.85)"
           }}
         />
       </View>
-      <View style={styles.bottomNavBar}>
+      {/* <View style={styles.bottomNavBar}>
         <Text style={styles.bannerText}>Need Some Service</Text>
+      </View> */}
+      <View style={styles.servicesSection}>
+        <View style={styles.task}>
+          <View style={styles.taskImage}>
+            <Avatar.Image size={50} source={require("../../assets/user.png")} />
+          </View>
+          <View style={styles.part2}>
+            <View style={styles.aboveText}>
+              <Ionicons name="ios-list" size={24} color="black" />
+              <Text variant="labelLarge">Need Carpenter For Bed</Text>
+            </View>
+            <Divider bold={true} />
+            <View style={styles.lowerText}>
+              <Ionicons name="location" size={24} color="black" />
+              <Text variant="labelLarge">Township, Lahore</Text>
+            </View>
+            <Divider bold={true} />
+          </View>
+          <View style={styles.part3}>
+            {/* create button and price tag below */}
+
+            <Button
+              mode="contained"
+              buttonColor="#316B8C"
+              onPress={() => console.log("Pressed")}
+            >
+              Open
+            </Button>
+
+            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+          </View>
+        </View>
+        <View style={styles.task}>
+          <View style={styles.taskImage}>
+            <Avatar.Image size={50} source={require("../../assets/user.png")} />
+          </View>
+          <View style={styles.part2}>
+            <View style={styles.aboveText}>
+              <Ionicons name="ios-list" size={24} color="black" />
+              <Text variant="labelLarge">Need Carpenter For Bed</Text>
+            </View>
+            <Divider bold={true} />
+            <View style={styles.lowerText}>
+              <Ionicons name="location" size={24} color="black" />
+              <Text variant="labelLarge">Township, Lahore</Text>
+            </View>
+            <Divider bold={true} />
+          </View>
+          <View style={styles.part3}>
+            {/* create button and price tag below */}
+
+            <Button
+              mode="contained"
+              buttonColor="#316B8C"
+              onPress={() => console.log("Pressed")}
+            >
+              Open
+            </Button>
+
+            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+          </View>
+        </View>
+        <View style={styles.task}>
+          <View style={styles.taskImage}>
+            <Avatar.Image size={50} source={require("../../assets/user.png")} />
+          </View>
+          <View style={styles.part2}>
+            <View style={styles.aboveText}>
+              <Ionicons name="ios-list" size={24} color="black" />
+              <Text variant="labelLarge">Need Carpenter For Bed</Text>
+            </View>
+            <Divider bold={true} />
+            <View style={styles.lowerText}>
+              <Ionicons name="location" size={24} color="black" />
+              <Text variant="labelLarge">Township, Lahore</Text>
+            </View>
+            <Divider bold={true} />
+          </View>
+          <View style={styles.part3}>
+            {/* create button and price tag below */}
+
+            <Button
+              mode="contained"
+              buttonColor="#316B8C"
+              onPress={() => console.log("Pressed")}
+            >
+              Open
+            </Button>
+
+            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+          </View>
+        </View>
+        <View style={styles.task}>
+          <View style={styles.taskImage}>
+            <Avatar.Image size={50} source={require("../../assets/user.png")} />
+          </View>
+          <View style={styles.part2}>
+            <View style={styles.aboveText}>
+              <Ionicons name="ios-list" size={24} color="black" />
+              <Text variant="labelLarge">Need Carpenter For Bed</Text>
+            </View>
+            <Divider bold={true} />
+            <View style={styles.lowerText}>
+              <Ionicons name="location" size={24} color="black" />
+              <Text variant="labelLarge">Township, Lahore</Text>
+            </View>
+            <Divider bold={true} />
+          </View>
+          <View style={styles.part3}>
+            {/* create button and price tag below */}
+
+            <Button
+              mode="contained"
+              buttonColor="#316B8C"
+              onPress={() => console.log("Pressed")}
+            >
+              Open
+            </Button>
+
+            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+          </View>
+        </View>
+        <View style={styles.task}>
+          <View style={styles.taskImage}>
+            <Avatar.Image size={50} source={require("../../assets/user.png")} />
+          </View>
+          <View style={styles.part2}>
+            <View style={styles.aboveText}>
+              <Ionicons name="ios-list" size={24} color="black" />
+              <Text variant="labelLarge">Need Carpenter For Bed</Text>
+            </View>
+            <Divider bold={true} />
+            <View style={styles.lowerText}>
+              <Ionicons name="location" size={24} color="black" />
+              <Text variant="labelLarge">Township, Lahore</Text>
+            </View>
+            <Divider bold={true} />
+          </View>
+          <View style={styles.part3}>
+            {/* create button and price tag below */}
+
+            <Button
+              mode="contained"
+              buttonColor="#316B8C"
+              onPress={() => console.log("Pressed")}
+            >
+              Open
+            </Button>
+
+            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+          </View>
+        </View>
+        <View style={styles.task}>
+          <View style={styles.taskImage}>
+            <Avatar.Image size={50} source={require("../../assets/user.png")} />
+          </View>
+          <View style={styles.part2}>
+            <View style={styles.aboveText}>
+              <Ionicons name="ios-list" size={24} color="black" />
+              <Text variant="labelLarge">Need Carpenter For Bed</Text>
+            </View>
+            <Divider bold={true} />
+            <View style={styles.lowerText}>
+              <Ionicons name="location" size={24} color="black" />
+              <Text variant="labelLarge">Township, Lahore</Text>
+            </View>
+            <Divider bold={true} />
+          </View>
+          <View style={styles.part3}>
+            {/* create button and price tag below */}
+
+            <Button
+              mode="contained"
+              buttonColor="#316B8C"
+              onPress={() => console.log("Pressed")}
+            >
+              Open
+            </Button>
+
+            <Chip onPress={() => console.log("Pressed")}>Price</Chip>
+          </View>
+        </View>
       </View>
-      <View style={styles.servicesSection}></View>
     </View>
     // {/* </ScrollView> */}
   );
@@ -67,6 +256,50 @@ const Fav = ({ navigation }) => {
 export default Fav;
 
 const styles = StyleSheet.create({
+  servicesSection: {
+    flex: 0.7,
+    // borderColor: "orange",
+    // borderWidth: 2,
+    // backgroundColor: "blue",
+  },
+  aboveText: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  lowerText: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  task: {
+    // flex: 0.3,
+    // borderColor: "red",
+    borderWidth: 1,
+    // backgroundColor: "pink",
+    flexDirection: "row",
+    // justifyContent:'center',
+    alignItems: "center",
+    // flexWrap: "wrap",
+  },
+  taskImage: {
+    flex: 0.14,
+    // borderColor: "red",
+    // borderWidth: 2,
+    // backgroundColor: "green",
+  },
+  part2: {
+    flex: 0.58,
+    // borderColor: "red",
+    // borderWidth: 2,
+    // backgroundColor: "yellow",
+  },
+  part3: {
+    flex: 0.28,
+    // borderColor: "red",
+    // borderWidth: 2,
+    // backgroundColor: "orange",
+  },
   gridContainer: {
     flex: 1,
     flexDirection: "row",
@@ -192,12 +425,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-  },
-  servicesSection: {
-    flex: 0.6,
-    borderColor: "orange",
-    borderWidth: 5,
-    backgroundColor: "blue",
   },
   bottomNavBar: {
     flex: 0.1,
